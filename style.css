@@ -1,0 +1,152 @@
+/* ================= GLOBAL STYLE ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f7fbff;
+    color: #1f2937;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+a { text-decoration: none; }
+
+/* ================= HEADER / NAVBAR ================= */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+    color: #2ecc71;
+}
+
+nav a {
+    margin-left: 18px;
+    color: #333;
+    font-weight: 500;
+    transition: .3s;
+}
+
+nav a:hover { color: #27ae60; }
+
+/* ================= HERO ================= */
+.hero {
+    height: 90vh;
+
+    /* Background Image */
+     background: url('image/main cover ph.jpeg') no-repeat center center;
+      background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+}
+
+.hero-overlay {
+    background-color: rgba(0,0,0,0.5); /* Dark overlay for readability */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    width: 70%;
+}
+
+/* Hero text styles */
+.hero h1 { font-size: 42px; margin-bottom: 15px; }
+.hero p { font-size: 18px; margin-bottom: 25px; }
+
+/* Hero buttons */
+.hero-btns a {
+    padding: 10px 20px;
+    border-radius: 25px;
+    display: inline-block;
+    margin: 6px;
+    transition: 0.4s;
+}
+
+/* Button styles */
+.primary { background: white; color: #27ae60; }
+.outline { border: 2px solid white; color: white; }
+.secondary { background: #27ae60; color: white; }
+.hero-btns a:hover { transform: scale(1.08); }
+
+/* ================= ABOUT ================= */
+.about { padding: 70px 10%; }
+.about-text { text-align: center; margin-bottom: 35px; }
+.about-text h2 { font-size: 32px; margin-bottom: 12px; }
+
+/* ================= SLIDER ================= */
+.slider {
+    width: 1000px;
+    height:1000px;
+    overflow: hidden;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.12);
+}
+.slides { display: flex; width: 200%; animation: slider 40s infinite; }
+.slides img { width: 100%; }
+
+/* ================= OTHER SECTIONS ================= */
+section { padding: 60px 10%; }
+.work, .purpose, .contact { text-align: center; }
+
+/* ================= FOOTER ================= */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #2ecc71;
+    color: white;
+    font-weight: 500;
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes slider {
+    1% { transform: translateX(0); }
+    25% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    75% { transform: translateX(-300%); }
+    100% { transform: translateX(0); }
+}
+
+.animate-fade { opacity: 0; transform: translateY(25px); animation: fadeIn 1.2s forwards; }
+.animate-slide { opacity: 0; transform: translateX(-30px); animation: slideIn 1.2s forwards; }
+
+@keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
+@keyframes slideIn { to { opacity: 1; transform: translateX(0); } }
+
+/* ================= RESPONSIVE ================= */
+@media(max-width: 768px){
+    .hero h1 { font-size: 30px; }
+    .hero-content { width: 95%; }
+    nav a { margin-left: 10px; }
+}
+
+
+
+/* main memdr img */
+
+.mimg{
+    max-width: 100%;
+    height:auto;
+}
